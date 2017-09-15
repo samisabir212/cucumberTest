@@ -20,12 +20,15 @@ import com.cucumber.listener.ExtentCucumberFormatter;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         plugin = {"json:target/positive/cucumber.json", "pretty", "html:target/positive/cucumber.html","com.cucumber.listener.ExtentCucumberFormatter"},
-        features = "C:\\Users\\ADMIN\\Downloads\\cucumber-testing-master\\src\\test\\resources\\FeatureFiles",
+        features = "/Users/sami/IdeaProjects/Cucumber_framework/src/test/resources/FeatureFiles",
         glue = "steps",
         tags = {"@Search-Cars"}        
         )
 
 public class PositiveTest  {
+
+
+
 	@BeforeClass
     public static void setup() {
         // Initiates the extent report and generates the output in the output/Run_<unique timestamp>/report.html file by default.
@@ -36,7 +39,9 @@ public class PositiveTest  {
 		File newFile = new File(fileName);
        // ExtentCucumberFormatter.initiateExtentCucumberFormatter(newFile,false);
 
-		ExtentCucumberFormatter.initiateExtentCucumberFormatter(new File("C:\\Users\\ADMIN\\Downloads\\cucumber-testing-master\\ExtenReports\\extentreports.html"),false);
+
+
+		ExtentCucumberFormatter.initiateExtentCucumberFormatter(new File("/Users/sami/IdeaProjects/Cucumber_framework/src/test/resources/Report/extentreports.html"),false);
         // Loads the extent config xml to customize on the report.
         ExtentCucumberFormatter.loadConfig(new File("src/test/resources/extent-config.xml"));
 

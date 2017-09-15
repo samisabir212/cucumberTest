@@ -25,8 +25,8 @@ public class SearchCarsSteps {
 	
 	@Given("^I am on the Home Page \"([^\"]*)\" of CarsGuide Website$")
 	public void i_am_on_the_Home_Page_of_CarsGuide_Website(String webSiteURL)  {
-	    SeleniumDriver.openPage(webSiteURL);
-	    
+		SeleniumDriver.openPage(webSiteURL);
+
 	}
 
 	@When("^I move to Car For Sale Menu$")
@@ -35,11 +35,11 @@ public class SearchCarsSteps {
 		System.out.println("Menu-->"+menu);
 		carsGuideHomePageActions.moveToCarsForSaleMenu();
 	}
-	
+
 
 	@And("^click on \"([^\"]*)\" link$")
 	public void click_on_link(String searchcars)  {
-	    //SeleniumDriver.waitForPageToLoad();
+		//SeleniumDriver.waitForPageToLoad();
 		carsGuideHomePageActions.clickOnSearchCarsMenu();
 	}
 

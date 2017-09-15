@@ -1,5 +1,8 @@
 @Used-Car-Search
-Feature: Acceptance testing to validate Search Cars Page is working.
+
+
+
+  Feature: Acceptance testing to validate Search Cars Page is working.
   In order to validate that 
   the Used Search Cars page is working
   Performing the Acceptance Testing
