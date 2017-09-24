@@ -20,12 +20,14 @@ import com.cucumber.listener.ExtentCucumberFormatter;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         plugin = {"json:target/negative/cucumber.json", "pretty", "html:target/negative/cucumber.html","com.cucumber.listener.ExtentCucumberFormatter"},
-        features = "C:\\Users\\ADMIN\\Downloads\\cucumber-testing-master\\src\\test\\resources\\FeatureFiles",
+        features = "/Users/sami/IdeaProjects/Cucumber_framework/src/test/resources/FeatureFiles",
         glue = "steps",
         tags = {"@Used-Car-Search"}        
         )
 
 public class NegativeTest {
+
+
 	@BeforeClass
     public static void setup() {
         // Initiates the extent report and generates the output in the output/Run_<unique timestamp>/report.html file by default.
@@ -33,6 +35,7 @@ public class NegativeTest {
 		SimpleDateFormat sdf = new SimpleDateFormat("ddMMyyyy_hhmmss");
 		Date curDate = new Date();
 		String strDate = sdf.format(curDate);
+
 		String fileName = "E:\\Extent_Reports\\report" + strDate+".html";
 		File newFile = new File(fileName);
         //ExtentCucumberFormatter.initiateExtentCucumberFormatter(newFile,false);

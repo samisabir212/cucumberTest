@@ -20,9 +20,6 @@ public class SeleniumDriver {
     public final static int PAGE_LOAD_TIMEOUT = 50;
 
     private  SeleniumDriver() {
-
-       
-
     	
         driver = new FirefoxDriver();
         driver.manage().window().maximize();
@@ -30,7 +27,7 @@ public class SeleniumDriver {
         waitDriver = new WebDriverWait(driver, TIMEOUT);
         driver.manage().timeouts().implicitlyWait(TIMEOUT, TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
-        String window=driver.getWindowHandle();
+        String window = driver.getWindowHandle();
         System.out.println("Window ->"+window);
        
     }
